@@ -1,5 +1,16 @@
 {
   "src/test/resources/solidity/end_to_end_testing_quick/pax_flattened.sol:PAXImplementation": {
+    "results": {},
+    "securifyErrors": {
+      "errors": [
+        {
+          "error": "decompilation_error",
+          "stackTrace": "java.lang.IllegalStateException: Dependency resolver reached method head. Should have resolved all dependencies by now (but didn\u0027t for \u0027dmy{}{?}\u0027). Possible use of undeclared variable in this scope (would be decompiler bug).\n\tat ch.securify.decompiler.DecompilerFallback.lambda$null$10(DecompilerFallback.java:277)\n\tat java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90)\n\tat java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)\n\tat java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)\n\tat java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)\n\tat java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)\n\tat java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)\n\tat java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)\n\tat java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230)\n\tat java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196)\n\tat java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)\n\tat java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:449)\n\tat ch.securify.decompiler.DecompilerFallback.lambda$decompile$11(DecompilerFallback.java:236)\n\tat java.util.Collection.removeIf(Collection.java:414)\n\tat ch.securify.decompiler.DecompilerFallback.decompile(DecompilerFallback.java:232)\n\tat ch.securify.Main.decompileContract(Main.java:276)\n\tat ch.securify.Main.processHexFile(Main.java:157)\n\tat ch.securify.Main.processCompilationOutput(Main.java:120)\n\tat ch.securify.Main.processSolidityFile(Main.java:94)\n\tat ch.securify.Main.main(Main.java:227)\n"
+        }
+      ]
+    }
+  },
+  "src/test/resources/solidity/end_to_end_testing_quick/pax_flattened.sol:SafeMath": {
     "results": {
       "DAO": {
         "violations": [],
@@ -15,11 +26,11 @@
       },
       "LockedEther": {
         "violations": [],
-        "warnings": [],
+        "warnings": [
+          31
+        ],
         "safe": [],
-        "conflicts": [
-          66
-        ]
+        "conflicts": []
       },
       "MissingInputValidation": {
         "violations": [],
@@ -52,52 +63,14 @@
         "conflicts": []
       },
       "UnrestrictedWrite": {
-        "violations": [
-          158,
-          159,
-          160,
-          161,
-          162
-        ],
-        "warnings": [
-          195,
-          196,
-          232,
-          233,
-          234,
-          250,
-          366,
-          405,
-          406,
-          419,
-          420
-        ],
+        "violations": [],
+        "warnings": [],
         "safe": [],
-        "conflicts": [
-          289,
-          307,
-          316,
-          329,
-          343,
-          353,
-          365,
-          391
-        ]
+        "conflicts": []
       }
     },
     "securifyErrors": {
       "errors": []
-    }
-  },
-  "src/test/resources/solidity/end_to_end_testing_quick/pax_flattened.sol:SafeMath": {
-    "results": {},
-    "securifyErrors": {
-      "errors": [
-        {
-          "error": "decompilation_error",
-          "stackTrace": "java.util.EmptyStackException\n\tat java.util.Stack.peek(Stack.java:102)\n\tat java.util.Stack.pop(Stack.java:84)\n\tat ch.securify.decompiler.Variable.takeFromStack(Variable.java:83)\n\tat ch.securify.decompiler.InstructionFactory.createAndApply(InstructionFactory.java:92)\n\tat ch.securify.decompiler.DecompilerFallback.decompile(DecompilerFallback.java:111)\n\tat ch.securify.Main.decompileContract(Main.java:276)\n\tat ch.securify.Main.processHexFile(Main.java:157)\n\tat ch.securify.Main.processCompilationOutput(Main.java:120)\n\tat ch.securify.Main.processSolidityFile(Main.java:94)\n\tat ch.securify.Main.main(Main.java:227)\n"
-        }
-      ]
     }
   }
 }

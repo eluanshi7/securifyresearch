@@ -204,67 +204,12 @@
     }
   },
   "src/test/resources/solidity/end_to_end_testing_quick/kybernetwork_flattened.sol:KyberNetwork": {
-    "results": {
-      "DAO": {
-        "violations": [],
-        "warnings": [],
-        "safe": [],
-        "conflicts": []
-      },
-      "DAOConstantGas": {
-        "violations": [],
-        "warnings": [],
-        "safe": [],
-        "conflicts": []
-      },
-      "LockedEther": {
-        "violations": [],
-        "warnings": [],
-        "safe": [],
-        "conflicts": []
-      },
-      "MissingInputValidation": {
-        "violations": [],
-        "warnings": [],
-        "safe": [],
-        "conflicts": []
-      },
-      "TODAmount": {
-        "violations": [],
-        "warnings": [],
-        "safe": [],
-        "conflicts": []
-      },
-      "TODReceiver": {
-        "violations": [],
-        "warnings": [],
-        "safe": [],
-        "conflicts": []
-      },
-      "UnhandledException": {
-        "violations": [],
-        "warnings": [],
-        "safe": [],
-        "conflicts": []
-      },
-      "UnrestrictedEtherFlow": {
-        "violations": [],
-        "warnings": [],
-        "safe": [],
-        "conflicts": []
-      },
-      "UnrestrictedWrite": {
-        "violations": [],
-        "warnings": [],
-        "safe": [],
-        "conflicts": []
-      }
-    },
+    "results": {},
     "securifyErrors": {
       "errors": [
         {
-          "error": "pattern_error",
-          "stackTrace": "java.lang.RuntimeException\n\tat ch.securify.analysis.Dataflow.\u003cinit\u003e(Dataflow.java:37)\n\tat ch.securify.analysis.DataflowFactory.getDataflow(DataflowFactory.java:55)\n\tat ch.securify.Main.checkPatterns(Main.java:353)\n\tat ch.securify.Main.processHexFile(Main.java:178)\n\tat ch.securify.Main.processCompilationOutput(Main.java:120)\n\tat ch.securify.Main.processSolidityFile(Main.java:94)\n\tat ch.securify.Main.main(Main.java:227)\n"
+          "error": "decompilation_error",
+          "stackTrace": "java.lang.IllegalStateException: expected JUMPDEST instruction after marked linear code\n\tat ch.securify.decompiler.DestackerFallback.lambda$getInstructions$26(DestackerFallback.java:606)\n\tat java.util.HashMap.forEach(HashMap.java:1289)\n\tat ch.securify.decompiler.DestackerFallback.getInstructions(DestackerFallback.java:508)\n\tat ch.securify.decompiler.DecompilerFallback.decompile(DecompilerFallback.java:172)\n\tat ch.securify.Main.decompileContract(Main.java:276)\n\tat ch.securify.Main.processHexFile(Main.java:157)\n\tat ch.securify.Main.processCompilationOutput(Main.java:120)\n\tat ch.securify.Main.processSolidityFile(Main.java:94)\n\tat ch.securify.Main.main(Main.java:227)\n"
         }
       ]
     }
@@ -406,96 +351,17 @@
     }
   },
   "src/test/resources/solidity/end_to_end_testing_quick/kybernetwork_flattened.sol:PermissionGroups": {
-    "results": {
-      "DAO": {
-        "violations": [],
-        "warnings": [],
-        "safe": [],
-        "conflicts": []
-      },
-      "DAOConstantGas": {
-        "violations": [],
-        "warnings": [],
-        "safe": [],
-        "conflicts": []
-      },
-      "LockedEther": {
-        "violations": [
-          79
-        ],
-        "warnings": [],
-        "safe": [],
-        "conflicts": []
-      },
-      "MissingInputValidation": {
-        "violations": [],
-        "warnings": [],
-        "safe": [],
-        "conflicts": []
-      },
-      "TODAmount": {
-        "violations": [],
-        "warnings": [],
-        "safe": [],
-        "conflicts": []
-      },
-      "TODReceiver": {
-        "violations": [],
-        "warnings": [],
-        "safe": [],
-        "conflicts": []
-      },
-      "UnhandledException": {
-        "violations": [],
-        "warnings": [],
-        "safe": [],
-        "conflicts": []
-      },
-      "UnrestrictedEtherFlow": {
-        "violations": [],
-        "warnings": [],
-        "safe": [],
-        "conflicts": []
-      },
-      "UnrestrictedWrite": {
-        "violations": [
-          79,
-          168,
-          193
-        ],
-        "warnings": [],
-        "safe": [],
-        "conflicts": [
-          2,
-          125,
-          136,
-          147,
-          148,
-          158,
-          159,
-          164,
-          183,
-          184,
-          189
-        ]
-      }
-    },
-    "securifyErrors": {
-      "errors": []
-    }
-  },
-  "src/test/resources/solidity/end_to_end_testing_quick/kybernetwork_flattened.sol:Utils": {
     "results": {},
     "securifyErrors": {
       "errors": [
         {
           "error": "decompilation_error",
-          "stackTrace": "java.util.EmptyStackException\n\tat java.util.Stack.peek(Stack.java:102)\n\tat java.util.Stack.pop(Stack.java:84)\n\tat ch.securify.decompiler.Variable.takeFromStack(Variable.java:83)\n\tat ch.securify.decompiler.InstructionFactory.createAndApply(InstructionFactory.java:92)\n\tat ch.securify.decompiler.DecompilerFallback.decompile(DecompilerFallback.java:111)\n\tat ch.securify.Main.decompileContract(Main.java:276)\n\tat ch.securify.Main.processHexFile(Main.java:157)\n\tat ch.securify.Main.processCompilationOutput(Main.java:120)\n\tat ch.securify.Main.processSolidityFile(Main.java:94)\n\tat ch.securify.Main.main(Main.java:227)\n"
+          "stackTrace": "java.lang.IllegalStateException: expected JUMPDEST instruction after marked linear code\n\tat ch.securify.decompiler.DestackerFallback.lambda$getInstructions$26(DestackerFallback.java:606)\n\tat java.util.HashMap.forEach(HashMap.java:1289)\n\tat ch.securify.decompiler.DestackerFallback.getInstructions(DestackerFallback.java:508)\n\tat ch.securify.decompiler.DecompilerFallback.decompile(DecompilerFallback.java:172)\n\tat ch.securify.Main.decompileContract(Main.java:276)\n\tat ch.securify.Main.processHexFile(Main.java:157)\n\tat ch.securify.Main.processCompilationOutput(Main.java:120)\n\tat ch.securify.Main.processSolidityFile(Main.java:94)\n\tat ch.securify.Main.main(Main.java:227)\n"
         }
       ]
     }
   },
-  "src/test/resources/solidity/end_to_end_testing_quick/kybernetwork_flattened.sol:Utils2": {
+  "src/test/resources/solidity/end_to_end_testing_quick/kybernetwork_flattened.sol:Utils": {
     "results": {
       "DAO": {
         "violations": [],
@@ -512,15 +378,13 @@
       "LockedEther": {
         "violations": [],
         "warnings": [
-          299
+          239
         ],
         "safe": [],
         "conflicts": []
       },
       "MissingInputValidation": {
-        "violations": [
-          304
-        ],
+        "violations": [],
         "warnings": [],
         "safe": [],
         "conflicts": []
@@ -539,17 +403,13 @@
       },
       "UnhandledException": {
         "violations": [],
-        "warnings": [
-          308
-        ],
+        "warnings": [],
         "safe": [],
         "conflicts": []
       },
       "UnrestrictedEtherFlow": {
         "violations": [],
-        "warnings": [
-          308
-        ],
+        "warnings": [],
         "safe": [],
         "conflicts": []
       },
@@ -562,6 +422,17 @@
     },
     "securifyErrors": {
       "errors": []
+    }
+  },
+  "src/test/resources/solidity/end_to_end_testing_quick/kybernetwork_flattened.sol:Utils2": {
+    "results": {},
+    "securifyErrors": {
+      "errors": [
+        {
+          "error": "decompilation_error",
+          "stackTrace": "java.lang.IllegalStateException: expected JUMPDEST instruction after marked linear code\n\tat ch.securify.decompiler.DestackerFallback.lambda$getInstructions$26(DestackerFallback.java:606)\n\tat java.util.HashMap.forEach(HashMap.java:1289)\n\tat ch.securify.decompiler.DestackerFallback.getInstructions(DestackerFallback.java:508)\n\tat ch.securify.decompiler.DecompilerFallback.decompile(DecompilerFallback.java:172)\n\tat ch.securify.Main.decompileContract(Main.java:276)\n\tat ch.securify.Main.processHexFile(Main.java:157)\n\tat ch.securify.Main.processCompilationOutput(Main.java:120)\n\tat ch.securify.Main.processSolidityFile(Main.java:94)\n\tat ch.securify.Main.main(Main.java:227)\n"
+        }
+      ]
     }
   },
   "src/test/resources/solidity/end_to_end_testing_quick/kybernetwork_flattened.sol:WhiteListInterface": {
@@ -633,95 +504,14 @@
     }
   },
   "src/test/resources/solidity/end_to_end_testing_quick/kybernetwork_flattened.sol:Withdrawable": {
-    "results": {
-      "DAO": {
-        "violations": [],
-        "warnings": [],
-        "safe": [],
-        "conflicts": []
-      },
-      "DAOConstantGas": {
-        "violations": [],
-        "warnings": [
-          228
-        ],
-        "safe": [],
-        "conflicts": []
-      },
-      "LockedEther": {
-        "violations": [],
-        "warnings": [
-          209
-        ],
-        "safe": [],
-        "conflicts": []
-      },
-      "MissingInputValidation": {
-        "violations": [],
-        "warnings": [],
-        "safe": [],
-        "conflicts": []
-      },
-      "TODAmount": {
-        "violations": [],
-        "warnings": [
-          228
-        ],
-        "safe": [],
-        "conflicts": []
-      },
-      "TODReceiver": {
-        "violations": [],
-        "warnings": [
-          228
-        ],
-        "safe": [],
-        "conflicts": []
-      },
-      "UnhandledException": {
-        "violations": [],
-        "warnings": [
-          218,
-          228
-        ],
-        "safe": [],
-        "conflicts": []
-      },
-      "UnrestrictedEtherFlow": {
-        "violations": [],
-        "warnings": [
-          218
-        ],
-        "safe": [],
-        "conflicts": [
-          228
-        ]
-      },
-      "UnrestrictedWrite": {
-        "violations": [
-          168,
-          193,
-          209
-        ],
-        "warnings": [],
-        "safe": [],
-        "conflicts": [
-          2,
-          125,
-          136,
-          147,
-          148,
-          158,
-          159,
-          164,
-          183,
-          184,
-          189
-        ]
-      }
-    },
+    "results": {},
     "securifyErrors": {
-      "errors": []
+      "errors": [
+        {
+          "error": "decompilation_error",
+          "stackTrace": "java.lang.IllegalStateException: expected JUMPDEST instruction after marked linear code\n\tat ch.securify.decompiler.DestackerFallback.lambda$getInstructions$26(DestackerFallback.java:606)\n\tat java.util.HashMap.forEach(HashMap.java:1289)\n\tat ch.securify.decompiler.DestackerFallback.getInstructions(DestackerFallback.java:508)\n\tat ch.securify.decompiler.DecompilerFallback.decompile(DecompilerFallback.java:172)\n\tat ch.securify.Main.decompileContract(Main.java:276)\n\tat ch.securify.Main.processHexFile(Main.java:157)\n\tat ch.securify.Main.processCompilationOutput(Main.java:120)\n\tat ch.securify.Main.processSolidityFile(Main.java:94)\n\tat ch.securify.Main.main(Main.java:227)\n"
+        }
+      ]
     }
   }
 }
